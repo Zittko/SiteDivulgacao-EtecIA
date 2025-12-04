@@ -1,0 +1,12 @@
+:root {
+    /* Cores Tema Escuro */
+    --primary-color-dark: #ff0066;
+    --secondary-color-dark: #201f1f;
+    --header-color-dark: #313131;
+    --text-color-dark: #f1f1f1;
+    /* Cores Tema Claro */
+    --primary-color-light: rgb(36, 140, 182);
+    --secondary-color-light: #bdbdbd;
+    --header-color-light: #f1f1f1;
+    --text-color-light: #201f1f;
+}
