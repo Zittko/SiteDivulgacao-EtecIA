@@ -18,6 +18,7 @@ modules[2].style.order = '3';
 modules[0].style.display = 'none';
 modules[2].style.display = 'none';
 
+window.scrollTo({ behavior: 'smooth' });
 
 async function setIcon(href) {
     try {
@@ -37,7 +38,6 @@ async function setIcon(href) {
     } catch (err) {
     }
 }
-
 function applyTheme(isLight) {
     logo.src = isLight ? lightLogo : darkLogo;
     logo.alt = 'ETEC Irmã Agostina logo';
@@ -50,7 +50,6 @@ const handler = e => applyTheme(e.matches);
 if (typeof mql.addEventListener === 'function') {
     mql.addEventListener('change', handler);
 }
-
 async function switchModulesUp(e) {
     modules[0].style.opacity = '0';
     modules[0].style.translate = '120px 0';
@@ -69,7 +68,6 @@ async function switchModulesUp(e) {
         tableLeftBtn.style.translate = '0 -30px';
     }
 }
-
 async function switchModulesDown(e) {
     modules[2].style.opacity = '0';
     modules[2].style.translate = '-120px 0';
@@ -107,6 +105,16 @@ window.addEventListener("scroll", () => {
   } else {
     header.classList.remove("scrolled");
   }
+});
+let scrollTimeout;
+window.addEventListener("scroll", () => {
+    const dashBoard = document.querySelector(".contBoard");
+    
+    if (window.scrollY > 800) {
+        dashBoard.classList.add("scroll");
+    } else {
+        dashBoard.classList.remove("scroll");
+    }
 });
 
 tableLeftBtn.addEventListener('click', switchModulesDown);
