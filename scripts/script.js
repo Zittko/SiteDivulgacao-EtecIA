@@ -17,6 +17,7 @@ modules[0].style.order = '1';
 modules[2].style.order = '3';
 modules[0].style.display = 'none';
 modules[2].style.display = 'none';
+document.body.style.background = '';
 
 window.scrollTo({ behavior: 'smooth' });
 
@@ -110,7 +111,7 @@ let scrollTimeout;
 window.addEventListener("scroll", () => {
     const dashBoard = document.querySelector(".contBoard");
     
-    if (window.scrollY > 800) {
+    if (window.scrollY > 100) {
         dashBoard.classList.add("scroll");
     } else {
         dashBoard.classList.remove("scroll");

@@ -1,8 +1,8 @@
 :root {
     /* Cores Tema Escuro */
-    --primary-color-dark: #ff0066;
-    --secondary-color-dark: #201f1f;
-    --header-color-dark: #313131;
+    --primary-color-dark: rgb(255, 0, 102);
+    --secondary-color-dark: rgb(32, 31, 31);
+    --header-color-dark: rgb(49, 49, 49);
     --text-color-dark: #f1f1f1;
     /* Cores Tema Claro */
     --primary-color-light: rgb(36, 140, 182);
